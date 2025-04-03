@@ -7,21 +7,26 @@ public class Main
 	{
 
 		/***** DECLARATION SECTION *****/
-	double dayToday = 2, monthToday = 2, yearToday = 2020;
-	double dayBday = 8, monthBday = 26, yearBday = 1918;
+		int month = 2, year=2020;
+int a = (14 - month) / 12, m = month + 12*a - 3, y = year + 4800 - a;
+        int monthBday = 8, yearBday=1918;
+int aB = (14 - monthBday) / 12, mB = monthBday + 12*aB - 3, yB = yearBday + 4800 - aB;
+
+
 		/***** INITIALIZATION SECTION *****/
 		
 		/***** INPUT SECTION *****/
 		// N/A (no input for this lab)
 		
 		/***** CALCULATION & PROCESSING SECTION *****/
-double jdnToday = dayToday + (153*monthToday+2)/5 + 365*yearToday + yearToday*0.25 - yearToday*0.01 + yearToday/400 - 32045;
-double jdnBday = dayBday + (153*monthBday+2)/5 + 365*yearBday + yearBday*0.25 - yearBday*0.01 + yearBday/400 - 32045;
-		
+double jdnToday = 2 + ((153*m)+2)/5 + 365*y + y*0.25 - y*0.01 + y/400 - 32045;
+int jdnTodayb = (int) jdnToday;
+double jdnBday = 26 + ((153*mB)+2)/5 + 365*yB + yB*0.25 - yB*0.01 + yB/400 - 32045;
+int jdnBdayb = (int) jdnBday;
 		/***** OUTPUT SECTION *****/
-		System.out.println("Julian Day Number for today's date, 2/2/2020, is " + jdnToday);
-		System.out.println("Julian Day Number for birthday, 8/26/1918, is " + jdnBday);
-		System.out.println("The difference in days is " + jdnBday + ", which makes you approximately 101 years old!");
+		System.out.println("Julian Day Number for today's date, 2/2/2020, is " + jdnTodayb);
+		System.out.println("Julian Day Number for birthday, 8/26/1918, is " + jdnBdayb);
+		System.out.println("The difference in days is " + (jdnTodayb - jdnBdayb) + ", which makes you approximately 101 years old!");
 		
   }
 }
