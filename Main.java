@@ -26,7 +26,9 @@ int jdnBday = (int) (dayBday + ((153*mB)+2)/5 + 365*yB + yB*0.25 - yB*0.01 + yB/
 
 		/***** OUTPUT SECTION *****/
 		System.out.println("Julian Day Number for today's date, 2/2/2020, is " + jdnToday);
+		System.out.println("");
 		System.out.println("Julian Day Number for birthday, 8/26/1918, is " + jdnBday);
+				System.out.println("");
 		System.out.println("The difference in days is " + (jdnToday - jdnBday) + ", which makes you approximately 101 years old!");
 		
   }
